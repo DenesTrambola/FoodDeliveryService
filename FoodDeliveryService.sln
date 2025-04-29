@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDeliveryService.Presentation", "FoodDeliveryService.Presentation\FoodDeliveryService.Presentation.csproj", "{31E6E22E-3F1F-42BF-8944-68638BE80DBB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{605E9EF7-738F-4F67-A68C-53EBD15DFDD2} = {605E9EF7-738F-4F67-A68C-53EBD15DFDD2}
+		{72450220-C018-49BA-89C9-C8EE8A0DA16A} = {72450220-C018-49BA-89C9-C8EE8A0DA16A}
+		{9E8783BA-5DA5-48F1-A69A-DDCE36F53378} = {9E8783BA-5DA5-48F1-A69A-DDCE36F53378}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDeliveryService.Domain", "FoodDeliveryService.Domain\FoodDeliveryService.Domain.csproj", "{9E8783BA-5DA5-48F1-A69A-DDCE36F53378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDeliveryService.Application", "FoodDeliveryService.Application\FoodDeliveryService.Application.csproj", "{72450220-C018-49BA-89C9-C8EE8A0DA16A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9E8783BA-5DA5-48F1-A69A-DDCE36F53378} = {9E8783BA-5DA5-48F1-A69A-DDCE36F53378}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDeliveryService.Infrastructure", "FoodDeliveryService.Infrastructure\FoodDeliveryService.Infrastructure.csproj", "{605E9EF7-738F-4F67-A68C-53EBD15DFDD2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{72450220-C018-49BA-89C9-C8EE8A0DA16A} = {72450220-C018-49BA-89C9-C8EE8A0DA16A}
+		{9E8783BA-5DA5-48F1-A69A-DDCE36F53378} = {9E8783BA-5DA5-48F1-A69A-DDCE36F53378}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31E6E22E-3F1F-42BF-8944-68638BE80DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31E6E22E-3F1F-42BF-8944-68638BE80DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31E6E22E-3F1F-42BF-8944-68638BE80DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31E6E22E-3F1F-42BF-8944-68638BE80DBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E8783BA-5DA5-48F1-A69A-DDCE36F53378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E8783BA-5DA5-48F1-A69A-DDCE36F53378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E8783BA-5DA5-48F1-A69A-DDCE36F53378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E8783BA-5DA5-48F1-A69A-DDCE36F53378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72450220-C018-49BA-89C9-C8EE8A0DA16A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72450220-C018-49BA-89C9-C8EE8A0DA16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72450220-C018-49BA-89C9-C8EE8A0DA16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72450220-C018-49BA-89C9-C8EE8A0DA16A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{605E9EF7-738F-4F67-A68C-53EBD15DFDD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605E9EF7-738F-4F67-A68C-53EBD15DFDD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605E9EF7-738F-4F67-A68C-53EBD15DFDD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605E9EF7-738F-4F67-A68C-53EBD15DFDD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E75795E-9E8F-48DF-B3C3-3B66547022DD}
+	EndGlobalSection
+EndGlobal
