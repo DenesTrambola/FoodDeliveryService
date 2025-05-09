@@ -1,10 +1,15 @@
-﻿namespace FoodDeliveryService.Domain.Entities;
+﻿using System.Text.Json.Serialization;
+
+namespace FoodDeliveryService.Domain.Entities;
 
 public class MealInOrder
 {
-    public required int MealId { get; set; }
-    public required int OrderId { get; set; }
-    public required int Quantity { get; set; }
+    public required Guid MealId { get; set; }
+    public required Guid OrderId { get; set; }
+
+    [JsonIgnore]
     public Meal Meal { get; set; } = null!;
+    [JsonIgnore]
     public Order Order { get; set; } = null!;
+    public required int Quantity { get; set; }
 }

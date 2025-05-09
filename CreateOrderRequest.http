@@ -1,0 +1,11 @@
+POST http://localhost:5001/orders
+Content-Type: application/json
+{
+  "restaurantId": "ebcd5ad3-adea-42a7-8281-4deeb3901060",
+  "status": 0,
+  "mealIdQuantities": {
+    "3f5bde39-1be3-43ae-a10a-152c3b470438": 2,
+    "4741bf17-79a6-4131-89dd-9b8fa1c927b1": 1,
+    "485f866e-a6a2-432f-a666-ab19578896ed": 3
+  }
+}

@@ -1,0 +1,8 @@
+POST http://localhost:5001/restaurants
+Content-Type: application/json
+{
+  "name": "Meki",
+  "phoneNumber": "123-456-7890",
+  "email": "meki@gmail.com",
+  "description": "Meki is gud"
+}

@@ -1,0 +1,6 @@
+PUT http://localhost:5001/orders/40234d6f-3d1b-476a-9427-13b8de732d58
+Content-Type: application/json
+{
+  "restaurantId": "ebcd5ad3-adea-42a7-8281-4deeb3901060",
+  "status": 1
+}

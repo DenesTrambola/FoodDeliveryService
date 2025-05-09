@@ -10,7 +10,6 @@ public class OrderConfiguration : IEntityTypeConfiguration<Order>
     {
         builder.HasKey(o => o.Id);
         builder.Property(o => o.TotalPrice).IsRequired().HasColumnType("decimal(18,2)");
-        builder.Property(o => o.OrderDate).IsRequired();
         builder.Property(o => o.Status).IsRequired();
         builder.HasOne(o => o.Restaurant)
             .WithMany(r => r.Orders)

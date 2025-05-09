@@ -7,14 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Persistence\Services\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="2.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.4" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FoodDeliveryService.Application\FoodDeliveryService.Application.csproj" />
     <ProjectReference Include="..\FoodDeliveryService.Domain\FoodDeliveryService.Domain.csproj" />
   </ItemGroup>
 

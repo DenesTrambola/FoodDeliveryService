@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDeliveryService.Presentation", "FoodDeliveryService.Presentation\FoodDeliveryService.Presentation.csproj", "{31E6E22E-3F1F-42BF-8944-68638BE80DBB}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -21,6 +21,34 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDeliveryService.Infrast
 	ProjectSection(ProjectDependencies) = postProject
 		{72450220-C018-49BA-89C9-C8EE8A0DA16A} = {72450220-C018-49BA-89C9-C8EE8A0DA16A}
 		{9E8783BA-5DA5-48F1-A69A-DDCE36F53378} = {9E8783BA-5DA5-48F1-A69A-DDCE36F53378}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requests", "Requests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RestaurantRequests", "RestaurantRequests", "{7C7DA3DB-507A-40CF-80AE-3C99E6D9F60D}"
+	ProjectSection(SolutionItems) = preProject
+		CreateRestaurantRequest.http = CreateRestaurantRequest.http
+		DeleteRestaurantRequest.http = DeleteRestaurantRequest.http
+		UpdateRestaurantRequest.http = UpdateRestaurantRequest.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderRequests", "OrderRequests", "{DF3981B3-6D94-432F-83A3-7349B0ED6D9A}"
+	ProjectSection(SolutionItems) = preProject
+		CreateOrderRequest.http = CreateOrderRequest.http
+		DeleteOrderRequest.http = DeleteOrderRequest.http
+		UpdateOrderRequest.http = UpdateOrderRequest.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MealRequests", "MealRequests", "{3B50D0B6-043D-49C4-8892-763ED67A85EE}"
+	ProjectSection(SolutionItems) = preProject
+		..\RestaurantApi\CreateMealRequest.http = ..\RestaurantApi\CreateMealRequest.http
+		DeleteMealRequest.http = DeleteMealRequest.http
+		UpdateMealRequest.http = UpdateMealRequest.http
 	EndProjectSection
 EndProject
 Global
@@ -48,6 +76,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C7DA3DB-507A-40CF-80AE-3C99E6D9F60D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{DF3981B3-6D94-432F-83A3-7349B0ED6D9A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{3B50D0B6-043D-49C4-8892-763ED67A85EE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E75795E-9E8F-48DF-B3C3-3B66547022DD}

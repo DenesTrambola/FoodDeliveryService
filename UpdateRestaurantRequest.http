@@ -1,0 +1,8 @@
+PUT http://localhost:5001/restaurants/bbd0a5f2-3636-4a43-babb-7815525bb46b
+Content-Type: application/json
+{
+  "name": "McDonalds",
+  "phoneNumber": "123-456-7890",
+  "email": "mcdonalds@gmail.com",
+  "description": "McDonalds is gud"
+}

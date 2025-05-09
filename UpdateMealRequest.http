@@ -1,0 +1,8 @@
+PUT http://localhost:5001/meals/4e59c4d2-270a-4dc8-8320-622c73afd2b5
+Content-Type: application/json
+{
+  "name": "KRUMPLI",
+  "price": 9.99,
+  "description": "Fresh garden salad with vinaigrette",
+  "restaurantId": "ebcd5ad3-adea-42a7-8281-4deeb3901060"
+}

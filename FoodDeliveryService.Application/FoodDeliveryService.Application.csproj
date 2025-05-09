@@ -7,8 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="ErrorOr" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FoodDeliveryService.Domain\FoodDeliveryService.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="DTO\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
