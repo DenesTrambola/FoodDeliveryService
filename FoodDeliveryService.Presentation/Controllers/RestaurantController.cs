@@ -10,7 +10,16 @@ public class RestaurantController(IRestaurantService service) : ApiController
 {
     IRestaurantService _service = service;
 
+    /// <summary>
+    /// Get all restaurants.
+    /// </summary>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>List of all restaurants.</returns>
     [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<Restaurant>), 200)]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(404)]
+    [ProducesResponseType(500)]
     public async Task<IActionResult> GetAll(CancellationToken cancellationToken)
     {
         var restaurants = await _service.GetAllRestaurantsAsync();
@@ -22,7 +31,17 @@ public class RestaurantController(IRestaurantService service) : ApiController
         return Ok(restaurants.Value);
     }
 
+    /// <summary>
+    /// Get a restaurant by ID.
+    /// </summary>
+    /// <param name="restaurantId">Restaurant identifier.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>Restaurant details for the specified ID.</returns>
     [HttpGet("{restaurantId:guid}")]
+    [ProducesResponseType(typeof(Restaurant), 200)]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(404)]
+    [ProducesResponseType(500)]
     public async Task<IActionResult> GetById(Guid restaurantId, CancellationToken cancellationToken)
     {
         var restaurant = await _service.GetRestaurantByIdAsync(restaurantId);
@@ -34,7 +53,17 @@ public class RestaurantController(IRestaurantService service) : ApiController
         return Ok(restaurant.Value);
     }
 
+    /// <summary>
+    /// Create a new restaurant.
+    /// </summary>
+    /// <param name="request">Restaurant creation details.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The created restaurant.</returns>
     [HttpPost]
+    [ProducesResponseType(typeof(Restaurant), 200)]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(404)]
+    [ProducesResponseType(500)]
     public async Task<IActionResult> Create([FromBody] CreateRestaurantRequest request, CancellationToken cancellationToken)
     {
         Restaurant restaurant = new()
@@ -55,7 +84,18 @@ public class RestaurantController(IRestaurantService service) : ApiController
         return Ok(result.Value);
     }
 
+    /// <summary>
+    /// Update an existing restaurant.
+    /// </summary>
+    /// <param name="restaurantId">Restaurant identifier.</param>
+    /// <param name="request">Updated restaurant details.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>The updated restaurant.</returns>
     [HttpPut("{restaurantId:guid}")]
+    [ProducesResponseType(typeof(Restaurant), 200)]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(404)]
+    [ProducesResponseType(500)]
     public async Task<IActionResult> Update(Guid restaurantId, [FromBody] CreateRestaurantRequest request, CancellationToken cancellationToken)
     {
         Restaurant restaurant = new()
@@ -77,7 +117,17 @@ public class RestaurantController(IRestaurantService service) : ApiController
         return Ok(result.Value);
     }
 
+    /// <summary>
+    /// Delete a restaurant by ID.
+    /// </summary>
+    /// <param name="restaurantId">Restaurant identifier.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns>Confirmation of restaurant deletion.</returns>
     [HttpDelete("{restaurantId:guid}")]
+    [ProducesResponseType(typeof(string), 200)]
+    [ProducesResponseType(400)]
+    [ProducesResponseType(404)]
+    [ProducesResponseType(500)]
     public async Task<IActionResult> Delete(Guid restaurantId, CancellationToken cancellationToken)
     {
         var result = await _service.DeleteRestaurantAsync(restaurantId);

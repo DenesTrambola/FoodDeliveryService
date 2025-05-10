@@ -52,7 +52,7 @@ public class MealController(IMealService service) : ApiController
         else if (meal.Value is null)
             return NotFound($"Meal with ID {mealId} not found.");
 
-        return Ok(meal);
+        return Ok(meal.Value);
     }
 
     /// <summary>
@@ -126,7 +126,7 @@ public class MealController(IMealService service) : ApiController
     /// <param name="cancellationToken">Cancellation token to cancel the operation.</param>
     /// <returns>A confirmation message upon successful deletion.</returns>
     [HttpDelete("{mealId:guid}")]
-    [ProducesResponseType(typeof(Meal), 200)]
+    [ProducesResponseType(typeof(string), 200)]
     [ProducesResponseType(400)]
     [ProducesResponseType(404)]
     [ProducesResponseType(500)]

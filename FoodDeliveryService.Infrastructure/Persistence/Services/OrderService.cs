@@ -8,10 +8,10 @@ using Microsoft.Extensions.Logging;
 
 namespace FoodDeliveryService.Infrastructure.Persistence.Services;
 
-public class OrderService(FoodDeliveryDbContext context, ILogger logger) : IOrderService
+public class OrderService(FoodDeliveryDbContext context, ILogger<OrderService> logger) : IOrderService
 {
     private readonly FoodDeliveryDbContext _context = context;
-    private readonly ILogger _logger = logger;
+    private readonly ILogger<OrderService> _logger = logger;
 
     public async Task<ErrorOr<Order>> CreateOrderAsync(Order order, IDictionary<Guid, int> mealIdQuantities, CancellationToken cancellationToken = default)
     {

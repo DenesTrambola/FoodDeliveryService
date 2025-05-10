@@ -7,10 +7,10 @@ using Microsoft.Extensions.Logging;
 
 namespace FoodDeliveryService.Infrastructure.Persistence.Services;
 
-public class RestaurantService(FoodDeliveryDbContext context, ILogger logger) : IRestaurantService
+public class RestaurantService(FoodDeliveryDbContext context, ILogger<RestaurantService> logger) : IRestaurantService
 {
     private readonly FoodDeliveryDbContext _context = context;
-    private readonly ILogger _logger = logger;
+    private readonly ILogger<RestaurantService> _logger = logger;
 
     public async Task<ErrorOr<Restaurant>> CreateRestaurantAsync(Restaurant restaurant, CancellationToken cancellationToken = default)
     {
